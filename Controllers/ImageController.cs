@@ -21,7 +21,7 @@ public class ImageController : Controller
 
     public async Task<IActionResult> Index()
     {
-        List<Image> images = await _imageService.GetImagesAsync();
+        List<Image> images = await _imageService.GetImagesAsync(0);
         return View(images);
     }
 
@@ -33,6 +33,6 @@ public class ImageController : Controller
         }
 
         await _imageService.UploadImageAsync(image, file);
-        return View("Index");
+        return await Index();
     }
 }

@@ -1,5 +1,14 @@
-﻿<h3>ImageItem</h3>
-
-@code {
-
+﻿@code {
+    [Parameter]
+    public string ImgPath { get; set; }
+    [Parameter]
+    public Double Price { get; set; }
+    [Parameter]
+    public string Name { get; set; }
 }
+
+<div class="card">
+    <img src="@ImgPath" alt="Image">
+    <div class="name">@Name</div>
+    <div class="name">@Price</div>
+</div>

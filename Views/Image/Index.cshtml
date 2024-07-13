@@ -1,8 +1,17 @@
 ﻿@{
     ViewData["Title"] = "Home Page";
 }
+@using Vangoph.Views.Image
+@model List<Image>
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+<div class="image-list">
+    @{
+        foreach (var item in Model)
+        {
+            <component type="typeof(ImageItem)" render-mode="ServerPrerendered" 
+                       param-Name="@item.Name"
+                       param-ImgPath="@item.ImageUrl"
+                       param-Price="@item.Price"/>
+        }
+    }
 </div>

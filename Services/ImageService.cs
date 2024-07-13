@@ -20,21 +20,24 @@ public class ImageService
         var fileExtension = Path.GetExtension(file.FileName);
         var uniqueFileName = Guid.NewGuid() + fileExtension;
 
-        var filePath = Path.Combine("uploads", uniqueFileName);
+        var relativePath = "uploads/" + uniqueFileName;
+        var absPath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", relativePath);
 
-        using (var stream = new FileStream(filePath, FileMode.Create))
+        using (var stream = new FileStream(absPath, FileMode.Create))
         {
             await file.CopyToAsync(stream);
         }
 
-        image.ImageUrl = filePath;
+        image.ImageUrl = relativePath;
 
         await _dbContext.AddAsync(image);
         await _dbContext.SaveChangesAsync();
     }
 
-    public async Task<List<Image>> GetImagesAsync()
+    public async Task<List<Image>> GetImagesAsync(int pageNum)
     {
-        return await _dbContext.Images.ToListAsync();
+        return await _dbContext.Images.Skip(50 * pageNum)
+            .Take(50)
+            .ToListAsync();
     }
 }
