@@ -19,6 +19,12 @@ public class ImageController : Controller
         return View();
     }
 
+    public async Task<IActionResult> DetailAsync(int imageId)
+    {
+        var image = await _imageService.GetImageByIdAsync(imageId);
+        return View("ImageDetail",image);
+    }
+
     public async Task<IActionResult> Index()
     {
         List<Image> images = await _imageService.GetImagesAsync(0);

@@ -9,9 +9,8 @@
         foreach (var item in Model)
         {
             <component type="typeof(ImageItem)" render-mode="ServerPrerendered" 
-                       param-Name="@item.Name"
-                       param-ImgPath="@item.ImageUrl"
-                       param-Price="@item.Price"/>
+                       param-Model="@item"/>
         }
     }
 </div>
+

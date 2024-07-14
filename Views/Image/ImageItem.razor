@@ -1,14 +1,12 @@
-﻿@code {
+﻿@using Vangoph.Models
+
+@code {
     [Parameter]
-    public string ImgPath { get; set; }
-    [Parameter]
-    public Double Price { get; set; }
-    [Parameter]
-    public string Name { get; set; }
+    public Image Model { get; set; }
 }
 
-<div class="card">
-    <img src="@ImgPath" alt="Image">
-    <div class="name">@Name</div>
-    <div class="name">@Price</div>
-</div>
+<a href="/Image/Detail?imageId=@Model.Id">
+    <img src="@Model.ImageUrl" alt="Image">
+    <div class="name">@Model.Name</div>
+    <div class="name">@Model.Price</div>
+</a>

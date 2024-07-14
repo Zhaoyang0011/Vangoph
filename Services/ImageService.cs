@@ -40,4 +40,9 @@ public class ImageService
             .Take(50)
             .ToListAsync();
     }
+
+    public async Task<Image> GetImageByIdAsync(int imageId)
+    {
+        return await _dbContext.Images.FindAsync(imageId);
+    }
 }
