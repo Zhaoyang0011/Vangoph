@@ -1,5 +1,7 @@
-﻿using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore.Metadata.Internal;
+﻿using System.Collections.Generic;
+using System.Threading.Tasks;
+using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Mvc;
 using Vangoph.Models;
 using Vangoph.Services;
 
@@ -19,10 +21,15 @@ public class ImageController : Controller
         return View();
     }
 
+    public IActionResult ImageManage()
+    {
+        return View();
+    }
+
     public async Task<IActionResult> DetailAsync(int imageId)
     {
         var image = await _imageService.GetImageByIdAsync(imageId);
-        return View("ImageDetail",image);
+        return View("ImageDetail", image);
     }
 
     public async Task<IActionResult> Index()

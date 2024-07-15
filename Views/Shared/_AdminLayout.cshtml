@@ -17,7 +17,7 @@
             <a asp-area="" asp-controller="Image" asp-action="Index" class="nav-brand">Vangoph's Admin</a>
             <ul class="navbar ">
                 <a asp-area="" asp-controller="Image" asp-action="ImageUpload">Upload</a>
-                <a asp-area="" asp-controller="Image" asp-action="ImageList">Manage</a>
+                <a asp-area="" asp-controller="Image" asp-action="ImageManage">Manage</a>
             </ul>
         </nav>
     </header>
@@ -36,7 +36,6 @@
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
     <script src="~/js/imageDragDrop.js" asp-append-version="true"></script>
-    </script>
     @await RenderSectionAsync("Scripts", required: false)
 </body>
 
