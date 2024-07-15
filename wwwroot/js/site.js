@@ -13,3 +13,24 @@ function limitDecimalPlaces(e, count) {
   }
 }
 
+
+//black and white effect
+document.addEventListener("DOMContentLoaded", function() {
+  const images = document.querySelectorAll('.image-item img');
+
+  images.forEach(image => {
+      image.addEventListener('mouseenter', () => {
+          images.forEach(img => {
+              if (img !== image) {
+                  img.classList.add('grayscale');
+              }
+          });
+      });
+
+      image.addEventListener('mouseleave', () => {
+          images.forEach(img => {
+              img.classList.remove('grayscale');
+          });
+      });
+  });
+});

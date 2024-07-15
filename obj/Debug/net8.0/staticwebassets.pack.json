@@ -1,8 +1,8 @@
 {
   "Files": [
     {
-      "Id": "C:\\Users\\lq262\\OneDrive\\文档\\GitHub\\Vangoph\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\Vangoph.bundle.scp.css",
-      "PackagePath": "staticwebassets\\Vangoph.bundle.scp.css"
+      "Id": "C:\\Users\\lq262\\OneDrive\\文档\\GitHub\\Vangoph\\wwwroot\\css\\layout.css",
+      "PackagePath": "staticwebassets\\css\\layout.css"
     },
     {
       "Id": "C:\\Users\\lq262\\OneDrive\\文档\\GitHub\\Vangoph\\wwwroot\\css\\site.css",
@@ -11,6 +11,10 @@
     {
       "Id": "C:\\Users\\lq262\\OneDrive\\文档\\GitHub\\Vangoph\\wwwroot\\favicon.ico",
       "PackagePath": "staticwebassets\\favicon.ico"
+    },
+    {
+      "Id": "C:\\Users\\lq262\\OneDrive\\文档\\GitHub\\Vangoph\\wwwroot\\js\\imageDragDrop.js",
+      "PackagePath": "staticwebassets\\js\\imageDragDrop.js"
     },
     {
       "Id": "C:\\Users\\lq262\\OneDrive\\文档\\GitHub\\Vangoph\\wwwroot\\js\\site.js",
@@ -243,6 +247,146 @@
     {
       "Id": "C:\\Users\\lq262\\OneDrive\\文档\\GitHub\\Vangoph\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
+    },
+    {
+      "Id": "C:\\Users\\lq262\\OneDrive\\文档\\GitHub\\Vangoph\\wwwroot\\test\\1.jpg",
+      "PackagePath": "staticwebassets\\test\\1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\lq262\\OneDrive\\文档\\GitHub\\Vangoph\\wwwroot\\test\\10.jpeg",
+      "PackagePath": "staticwebassets\\test\\10.jpeg"
+    },
+    {
+      "Id": "C:\\Users\\lq262\\OneDrive\\文档\\GitHub\\Vangoph\\wwwroot\\test\\11.jpg",
+      "PackagePath": "staticwebassets\\test\\11.jpg"
+    },
+    {
+      "Id": "C:\\Users\\lq262\\OneDrive\\文档\\GitHub\\Vangoph\\wwwroot\\test\\12.jpg",
+      "PackagePath": "staticwebassets\\test\\12.jpg"
+    },
+    {
+      "Id": "C:\\Users\\lq262\\OneDrive\\文档\\GitHub\\Vangoph\\wwwroot\\test\\13.jpeg",
+      "PackagePath": "staticwebassets\\test\\13.jpeg"
+    },
+    {
+      "Id": "C:\\Users\\lq262\\OneDrive\\文档\\GitHub\\Vangoph\\wwwroot\\test\\14.jpg",
+      "PackagePath": "staticwebassets\\test\\14.jpg"
+    },
+    {
+      "Id": "C:\\Users\\lq262\\OneDrive\\文档\\GitHub\\Vangoph\\wwwroot\\test\\15.jpg",
+      "PackagePath": "staticwebassets\\test\\15.jpg"
+    },
+    {
+      "Id": "C:\\Users\\lq262\\OneDrive\\文档\\GitHub\\Vangoph\\wwwroot\\test\\16.jpg",
+      "PackagePath": "staticwebassets\\test\\16.jpg"
+    },
+    {
+      "Id": "C:\\Users\\lq262\\OneDrive\\文档\\GitHub\\Vangoph\\wwwroot\\test\\17.jpg",
+      "PackagePath": "staticwebassets\\test\\17.jpg"
+    },
+    {
+      "Id": "C:\\Users\\lq262\\OneDrive\\文档\\GitHub\\Vangoph\\wwwroot\\test\\18.jpg",
+      "PackagePath": "staticwebassets\\test\\18.jpg"
+    },
+    {
+      "Id": "C:\\Users\\lq262\\OneDrive\\文档\\GitHub\\Vangoph\\wwwroot\\test\\19.jpg",
+      "PackagePath": "staticwebassets\\test\\19.jpg"
+    },
+    {
+      "Id": "C:\\Users\\lq262\\OneDrive\\文档\\GitHub\\Vangoph\\wwwroot\\test\\2.jpg",
+      "PackagePath": "staticwebassets\\test\\2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\lq262\\OneDrive\\文档\\GitHub\\Vangoph\\wwwroot\\test\\20.jpg",
+      "PackagePath": "staticwebassets\\test\\20.jpg"
+    },
+    {
+      "Id": "C:\\Users\\lq262\\OneDrive\\文档\\GitHub\\Vangoph\\wwwroot\\test\\21.jpg",
+      "PackagePath": "staticwebassets\\test\\21.jpg"
+    },
+    {
+      "Id": "C:\\Users\\lq262\\OneDrive\\文档\\GitHub\\Vangoph\\wwwroot\\test\\22.jpg",
+      "PackagePath": "staticwebassets\\test\\22.jpg"
+    },
+    {
+      "Id": "C:\\Users\\lq262\\OneDrive\\文档\\GitHub\\Vangoph\\wwwroot\\test\\23.jpg",
+      "PackagePath": "staticwebassets\\test\\23.jpg"
+    },
+    {
+      "Id": "C:\\Users\\lq262\\OneDrive\\文档\\GitHub\\Vangoph\\wwwroot\\test\\24.jpg",
+      "PackagePath": "staticwebassets\\test\\24.jpg"
+    },
+    {
+      "Id": "C:\\Users\\lq262\\OneDrive\\文档\\GitHub\\Vangoph\\wwwroot\\test\\25.jpg",
+      "PackagePath": "staticwebassets\\test\\25.jpg"
+    },
+    {
+      "Id": "C:\\Users\\lq262\\OneDrive\\文档\\GitHub\\Vangoph\\wwwroot\\test\\26.jpg",
+      "PackagePath": "staticwebassets\\test\\26.jpg"
+    },
+    {
+      "Id": "C:\\Users\\lq262\\OneDrive\\文档\\GitHub\\Vangoph\\wwwroot\\test\\27.jpg",
+      "PackagePath": "staticwebassets\\test\\27.jpg"
+    },
+    {
+      "Id": "C:\\Users\\lq262\\OneDrive\\文档\\GitHub\\Vangoph\\wwwroot\\test\\28.jpg",
+      "PackagePath": "staticwebassets\\test\\28.jpg"
+    },
+    {
+      "Id": "C:\\Users\\lq262\\OneDrive\\文档\\GitHub\\Vangoph\\wwwroot\\test\\29.jpg",
+      "PackagePath": "staticwebassets\\test\\29.jpg"
+    },
+    {
+      "Id": "C:\\Users\\lq262\\OneDrive\\文档\\GitHub\\Vangoph\\wwwroot\\test\\3.jpg",
+      "PackagePath": "staticwebassets\\test\\3.jpg"
+    },
+    {
+      "Id": "C:\\Users\\lq262\\OneDrive\\文档\\GitHub\\Vangoph\\wwwroot\\test\\30.jpg",
+      "PackagePath": "staticwebassets\\test\\30.jpg"
+    },
+    {
+      "Id": "C:\\Users\\lq262\\OneDrive\\文档\\GitHub\\Vangoph\\wwwroot\\test\\31.jpg",
+      "PackagePath": "staticwebassets\\test\\31.jpg"
+    },
+    {
+      "Id": "C:\\Users\\lq262\\OneDrive\\文档\\GitHub\\Vangoph\\wwwroot\\test\\32.png",
+      "PackagePath": "staticwebassets\\test\\32.png"
+    },
+    {
+      "Id": "C:\\Users\\lq262\\OneDrive\\文档\\GitHub\\Vangoph\\wwwroot\\test\\33.png",
+      "PackagePath": "staticwebassets\\test\\33.png"
+    },
+    {
+      "Id": "C:\\Users\\lq262\\OneDrive\\文档\\GitHub\\Vangoph\\wwwroot\\test\\34.jpg",
+      "PackagePath": "staticwebassets\\test\\34.jpg"
+    },
+    {
+      "Id": "C:\\Users\\lq262\\OneDrive\\文档\\GitHub\\Vangoph\\wwwroot\\test\\35.jpg",
+      "PackagePath": "staticwebassets\\test\\35.jpg"
+    },
+    {
+      "Id": "C:\\Users\\lq262\\OneDrive\\文档\\GitHub\\Vangoph\\wwwroot\\test\\4.jpg",
+      "PackagePath": "staticwebassets\\test\\4.jpg"
+    },
+    {
+      "Id": "C:\\Users\\lq262\\OneDrive\\文档\\GitHub\\Vangoph\\wwwroot\\test\\5.jpg",
+      "PackagePath": "staticwebassets\\test\\5.jpg"
+    },
+    {
+      "Id": "C:\\Users\\lq262\\OneDrive\\文档\\GitHub\\Vangoph\\wwwroot\\test\\6.jpg",
+      "PackagePath": "staticwebassets\\test\\6.jpg"
+    },
+    {
+      "Id": "C:\\Users\\lq262\\OneDrive\\文档\\GitHub\\Vangoph\\wwwroot\\test\\7.jpg",
+      "PackagePath": "staticwebassets\\test\\7.jpg"
+    },
+    {
+      "Id": "C:\\Users\\lq262\\OneDrive\\文档\\GitHub\\Vangoph\\wwwroot\\test\\8.jpg",
+      "PackagePath": "staticwebassets\\test\\8.jpg"
+    },
+    {
+      "Id": "C:\\Users\\lq262\\OneDrive\\文档\\GitHub\\Vangoph\\wwwroot\\test\\9.jpg",
+      "PackagePath": "staticwebassets\\test\\9.jpg"
     },
     {
       "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.Vangoph.Microsoft.AspNetCore.StaticWebAssets.props",

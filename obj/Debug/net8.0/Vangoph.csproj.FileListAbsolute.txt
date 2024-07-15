@@ -126,9 +126,7 @@ C:\Users\lq262\OneDrive\文档\GitHub\Vangoph\obj\Debug\net8.0\staticwebassets\m
 C:\Users\lq262\OneDrive\文档\GitHub\Vangoph\obj\Debug\net8.0\staticwebassets\msbuild.buildMultiTargeting.Vangoph.props
 C:\Users\lq262\OneDrive\文档\GitHub\Vangoph\obj\Debug\net8.0\staticwebassets\msbuild.buildTransitive.Vangoph.props
 C:\Users\lq262\OneDrive\文档\GitHub\Vangoph\obj\Debug\net8.0\staticwebassets.pack.json
-C:\Users\lq262\OneDrive\文档\GitHub\Vangoph\obj\Debug\net8.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
 C:\Users\lq262\OneDrive\文档\GitHub\Vangoph\obj\Debug\net8.0\scopedcss\bundle\Vangoph.styles.css
-C:\Users\lq262\OneDrive\文档\GitHub\Vangoph\obj\Debug\net8.0\scopedcss\projectbundle\Vangoph.bundle.scp.css
 C:\Users\lq262\OneDrive\文档\GitHub\Vangoph\obj\Debug\net8.0\Vangoph.csproj.Up2Date
 C:\Users\lq262\OneDrive\文档\GitHub\Vangoph\obj\Debug\net8.0\Vangoph.dll
 C:\Users\lq262\OneDrive\文档\GitHub\Vangoph\obj\Debug\net8.0\refint\Vangoph.dll
