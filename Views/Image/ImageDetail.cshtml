@@ -5,13 +5,15 @@
 
 
 <div class="detail">
-    <div class="image-wrapper"> <img src="@Url.Content("~/"+Model.ImageUrl)" alt="Image"></div>
+    <div class="image-wrapper">
+        <img src="@Url.Content("~/" + Model.ImageUrl)" alt="Image">
+    </div>
 
 
     <div class="detail-section">
         <h2 class="title">@Model.Name</h2>
-        <div class="date">@Model.CreationDate</div> 
-        <div class="author">Davince FT. HJosdflety</div><!--------------Add Author--------->
+        <div class="date">@Model.CreationDate</div>
+        <div class="author">@Model.Author</div><!--------------Add Author--------->
         <div class="price">@("CAD ")@Model.Price</div>
         <div class="desc"> @Model.Description</div>
         <a asp-area="" asp-controller="Image" asp-action="Index">Back to Home</a>
