@@ -1,31 +1,25 @@
 {
   "format": 1,
   "restore": {
-    "E:\\FDU\\6844\\Vangoph\\Vangoph.csproj": {}
+    "C:\\Users\\lq262\\OneDrive\\文档\\GitHub\\Vangoph\\Vangoph.csproj": {}
   },
   "projects": {
-    "E:\\FDU\\6844\\Vangoph\\Vangoph.csproj": {
+    "C:\\Users\\lq262\\OneDrive\\文档\\GitHub\\Vangoph\\Vangoph.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\FDU\\6844\\Vangoph\\Vangoph.csproj",
+        "projectUniqueName": "C:\\Users\\lq262\\OneDrive\\文档\\GitHub\\Vangoph\\Vangoph.csproj",
         "projectName": "Vangoph",
-        "projectPath": "E:\\FDU\\6844\\Vangoph\\Vangoph.csproj",
-        "packagesPath": "C:\\Users\\Shi Zhaoyang\\.nuget\\packages\\",
-        "outputPath": "E:\\FDU\\6844\\Vangoph\\obj\\",
+        "projectPath": "C:\\Users\\lq262\\OneDrive\\文档\\GitHub\\Vangoph\\Vangoph.csproj",
+        "packagesPath": "C:\\Users\\lq262\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\lq262\\OneDrive\\文档\\GitHub\\Vangoph\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "E:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\Shi Zhaoyang\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\lq262\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
