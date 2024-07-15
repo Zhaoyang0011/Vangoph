@@ -39,7 +39,7 @@ public class ImageController : Controller
     [HttpPost("upload")]
     public async Task<IActionResult> UploadAsync(Image image, IFormFile file)
     {
-        if (file == null)
+        if (file == null || file.Length == 0)
         {
             return View("ImageUpload", "No file selected.");
         }
@@ -56,7 +56,7 @@ public class ImageController : Controller
     }
 
     [HttpPost("delete")]
-    public async Task<IActionResult> DeleteAsync([FromBody] int imageId)
+    public async Task<IActionResult> DeleteAsync(int imageId)
     {
         await _imageService.DeleteImageByIdAsync(imageId);
         return Redirect("manage");

@@ -8,7 +8,12 @@
     @{
         foreach (var item in Model)
         {
-            <component type="typeof(ImageItem)" render-mode="ServerPrerendered" param-Model="@item"/>
+            <component type="typeof(ImageManageItem)" render-mode="ServerPrerendered" param-Model="@item"/>
+            @using (Html.BeginForm("Delete", "Image", FormMethod.Post))
+            {
+                <input type="hidden" name="imageId" value="@item.Id"/>
+                <button type="submit">TEXT</button>
+            }
         }
     }
 </div>
