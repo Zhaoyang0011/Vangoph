@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -9,22 +9,16 @@
     <link rel="stylesheet" href="~/css/layout.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/Vangoph.styles.css" asp-append-version="true" />
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" asp-append-version="true" />
-
 </head>
 
 <body>
     <header>
         <nav>
-            <a class="nav-brand" asp-area="" asp-controller="Image" asp-action="Index">Vangoph's Backyard</a>
-
-
-            <div class="navbar envelope">
-                <a href="#0">
-                    <i class="fas fa-envelope"></i>
-                      <span>Contact US</span>
-                </a>
-            </div>
-
+            <a asp-area="" asp-controller="Image" asp-action="Index" class="nav-brand">Vangoph's Admin</a>
+            <ul class="navbar ">
+                <a asp-area="" asp-controller="Image" asp-action="ImageUpload">Upload</a>
+                <a asp-area="" asp-controller="Image" asp-action="ImageList">Manage</a>
+            </ul>
         </nav>
     </header>
 

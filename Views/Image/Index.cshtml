@@ -4,13 +4,12 @@
 @using Vangoph.Views.Image
 @model List<Image>
 
+
 <div class="image-list">
     @{
         foreach (var item in Model)
         {
-            <component type="typeof(ImageItem)" render-mode="ServerPrerendered" 
-                       param-Model="@item"/>
+            <component type="typeof(ImageItem)" render-mode="ServerPrerendered" param-Model="@item" />
         }
     }
 </div>
-
