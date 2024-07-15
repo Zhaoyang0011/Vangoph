@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Vangoph")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+96dfd2994d8f8d68ff9d469de190d4eadd9adec3")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c551ddc13516c55088fbaee88984ad2c1186eaa7")]
 [assembly: System.Reflection.AssemblyProductAttribute("Vangoph")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Vangoph")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
