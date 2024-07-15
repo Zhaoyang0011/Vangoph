@@ -41,4 +41,10 @@ public class ImageController : Controller
         await _imageService.UploadImageAsync(image, file);
         return await Index();
     }
+
+    public async Task<IActionResult> DeleteAsync(int imageId)
+    {
+        await _imageService.DeleteImageByIdAsync(imageId);
+        return await Index();
+    }
 }

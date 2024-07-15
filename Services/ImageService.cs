@@ -45,4 +45,9 @@ public class ImageService
     {
         return await _dbContext.Images.FindAsync(imageId);
     }
+
+    public async Task DeleteImageByIdAsync(int imageId)
+    {
+        await _dbContext.Images.Where(it => it.Id == imageId).ExecuteDeleteAsync();
+    }
 }
