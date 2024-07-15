@@ -7,6 +7,7 @@ using Vangoph.Services;
 
 namespace Vangoph.Controllers;
 
+[Route("[controller]")]
 public class ImageController : Controller
 {
     private readonly ImageService _imageService;
@@ -16,28 +17,26 @@ public class ImageController : Controller
         _imageService = imageService;
     }
 
-    public IActionResult ImageUpload()
+    public async Task<IActionResult> Index()
     {
-        return View();
+        List<Image> images = await _imageService.GetImagesAsync(0);
+        return View("Index", images);
     }
 
-    public IActionResult ImageManage()
-    {
-        return View();
-    }
-
+    [HttpGet("detail")]
     public async Task<IActionResult> DetailAsync(int imageId)
     {
         var image = await _imageService.GetImageByIdAsync(imageId);
         return View("ImageDetail", image);
     }
 
-    public async Task<IActionResult> Index()
+    [HttpGet("upload")]
+    public IActionResult UploadPage()
     {
-        List<Image> images = await _imageService.GetImagesAsync(0);
-        return View(images);
+        return View("ImageUpload");
     }
 
+    [HttpPost("upload")]
     public async Task<IActionResult> UploadAsync(Image image, IFormFile file)
     {
         if (file == null)
@@ -46,12 +45,20 @@ public class ImageController : Controller
         }
 
         await _imageService.UploadImageAsync(image, file);
-        return await Index();
+        return Redirect("/Image");
     }
 
-    public async Task<IActionResult> DeleteAsync(int imageId)
+    [HttpGet("manage")]
+    public async Task<IActionResult> ManageAsync()
+    {
+        List<Image> images = await _imageService.GetImagesAsync(0);
+        return View("ImageManage", images);
+    }
+
+    [HttpPost("delete")]
+    public async Task<IActionResult> DeleteAsync([FromBody] int imageId)
     {
         await _imageService.DeleteImageByIdAsync(imageId);
-        return await Index();
+        return Redirect("manage");
     }
 }

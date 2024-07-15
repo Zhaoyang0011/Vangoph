@@ -1,20 +1,14 @@
 ﻿@{
     ViewData["Title"] = "Image detail";
 }
-@model Image
+@using Vangoph.Views.Image
+@model List<Image>
 
-
-<div class="detail">
-    <div class="image-wrapper"> <img src="@Url.Content("~/"+Model.ImageUrl)" alt="Image"></div>
-
-
-    <div class="detail-section">
-        <h2 class="title">@Model.Name</h2>
-        <div class="date">@Model.CreationDate</div> 
-        <div class="author">Davince FT. HJosdflety</div><!--------------Add Author--------->
-        <div class="price">@("CAD ")@Model.Price</div>
-        <div class="desc"> @Model.Description</div>
-        <a asp-area="" asp-controller="Image" asp-action="Index">Back to Home</a>
-    </div>
-
+<div class="image-list">
+    @{
+        foreach (var item in Model)
+        {
+            <component type="typeof(ImageItem)" render-mode="ServerPrerendered" param-Model="@item"/>
+        }
+    }
 </div>

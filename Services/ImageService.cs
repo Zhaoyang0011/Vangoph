@@ -34,7 +34,7 @@ public class ImageService
             await file.CopyToAsync(stream);
         }
 
-        image.ImageUrl = relativePath;
+        image.ImageUrl = "/" + relativePath;
 
         await _dbContext.AddAsync(image);
         await _dbContext.SaveChangesAsync();

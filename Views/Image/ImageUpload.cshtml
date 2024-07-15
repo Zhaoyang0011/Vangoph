@@ -4,16 +4,16 @@
 
 }
 
-<form method="post" asp-action="Upload" enctype="multipart/form-data">
-
-
+<form method="post" asp-controller="Image" asp-action="Upload" enctype="multipart/form-data">
 
 
     <!-------------------Left side Section for image uploading-------------->
 
     <div class="form-section drag-image">
         <span>
-            <div class="icon"><i class="fas fa-cloud-upload-alt"></i></div>
+            <div class="icon">
+                <i class="fas fa-cloud-upload-alt"></i>
+            </div>
             <h6>Drag & Drop File Here</h6>
             <h6>OR</h6>
         </span>
@@ -26,23 +26,25 @@
     <div class="form-section input-section">
         <h3 style="text-align: center;">New Artwork</h3>
         <div class="input-box">
-            <input id="name" name="name" required />
+            <input id="name" name="name" required/>
             <label>Art Title</label>
         </div>
 
         <div class="input-box">
-            <input type="number" step="0.01" id="price" name="price" required oninput="limitDecimalPlaces(event, 2)" />
+            <input type="number" step="0.01" id="price" name="price" required oninput="limitDecimalPlaces(event, 2)"/>
             <label>Price</label>
         </div>
 
         <div class="input-box">
-            <input type="text" id="author" name="author" required />
+            <input type="text" id="author" name="author" required/>
             <label>Author</label>
         </div>
 
 
-        <div class="input-box textarea-box"><textarea placeholder="Add Description Here :)" id="description"
-                name="description" required></textarea></div>
+        <div class="input-box textarea-box">
+            <textarea placeholder="Add Description Here :)" id="description"
+                name="description" required></textarea>
+        </div>
 
         <button type="submit" class="btn btn-primary">Upload</button>
     </div>
