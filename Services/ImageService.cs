@@ -56,4 +56,18 @@ public class ImageService
     {
         await _dbContext.Images.Where(it => it.Id == imageId).ExecuteDeleteAsync();
     }
+
+    public async Task UpdateImageAsync(Image image)
+    {
+        Image origin = await _dbContext.Images.FindAsync(image.Id);
+
+        if (origin != null)
+        {
+            origin.Author = image.Author;
+            origin.Name = image.Name;
+            origin.Price = image.Price;
+            origin.Description = image.Description;
+            await _dbContext.SaveChangesAsync();
+        }
+    }
 }

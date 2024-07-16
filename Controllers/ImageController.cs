@@ -27,7 +27,9 @@ public class ImageController : Controller
     public async Task<IActionResult> DetailAsync(int imageId)
     {
         var image = await _imageService.GetImageByIdAsync(imageId);
-        return View("ImageDetail", image);
+        if (image != null)
+            return View("ImageDetail", image);
+        return View("Error", "Image does not exists!");
     }
 
     [HttpGet("upload")]
@@ -60,5 +62,21 @@ public class ImageController : Controller
     {
         await _imageService.DeleteImageByIdAsync(imageId);
         return Redirect("manage");
+    }
+
+    [HttpGet("update")]
+    public async Task<IActionResult> UpdatePageAsync(int imageId)
+    {
+        var image = await _imageService.GetImageByIdAsync(imageId);
+        if (image != null)
+            return View("ImageEdit", image);
+        return View("Error", "Image does not exists!");
+    }
+
+    [HttpPost("update")]
+    public async Task<IActionResult> UpdateAsync(Image image)
+    {
+        await _imageService.UpdateImageAsync(image);
+        return Redirect("detail");
     }
 }
