@@ -9,11 +9,28 @@
         foreach (var item in Model)
         {
             <component type="typeof(ImageManageItem)" render-mode="ServerPrerendered" param-Model="@item"/>
-            @using (Html.BeginForm("Delete", "Image", FormMethod.Post))
-            {
-                <input type="hidden" name="imageId" value="@item.Id"/>
-                <button type="submit">TEXT</button>
-            }
+            <button onclick="postDelete(@item.Id)">delete</button>
+            <button onclick="getUpdate(@item.Id)">update</button>
         }
     }
 </div>
+
+<script>
+    function postDelete(id) {
+        $.post("/Image/delete", 
+        {
+            imageId: id,
+        },
+        function(data, status) {
+            // 请求成功后刷新页面
+            if (status === "success") {
+                location.reload();
+            } else {
+                alert("Error: " + status);
+            }
+        });
+    }
+    function getUpdate(id) {
+        window.location.assign(`/Image/update?imageId=${id}`);
+    }
+</script>

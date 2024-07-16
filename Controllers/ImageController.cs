@@ -77,6 +77,6 @@ public class ImageController : Controller
     public async Task<IActionResult> UpdateAsync(Image image)
     {
         await _imageService.UpdateImageAsync(image);
-        return Redirect("detail");
+        return Redirect($"detail?imageId={image.Id}");
     }
 }
