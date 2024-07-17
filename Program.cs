@@ -18,6 +18,7 @@ builder.Services.AddDbContext<AppDbContext>(options =>
     options.UseSqlServer(connectionString));
 
 builder.Services.AddScoped<ImageService>();
+builder.Services.AddScoped<MailSender>();
 
 var app = builder.Build();
 
