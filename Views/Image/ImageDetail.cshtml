@@ -10,13 +10,33 @@
     </div>
 
 
-    <div class="detail-section">
-        <h2 class="title">@Model.Name</h2>
-        <div class="date">@Model.CreationDate</div>
-        <div class="author">@Model.Author</div>
-        <div class="price">@("CAD ")@Model.Price</div>
-        <div class="desc"> @Model.Description</div>
-        <a asp-area="" asp-controller="Image" asp-action="Index">Back to Home</a>
-    </div>
+    <div class="detail-wrapper">
+        <div class="detail-section">
+            <h2 class="title">@Model.Name</h2>
+            <div class="date">@Model.CreationDate.ToString("MMMM dd, yyyy")</div>
+            <div class="author">@Model.Author</div>
+            <div class="price">@("CAD ")@String.Format("{0:#,##0.00}", Model.Price)</div>
+            <div class="desc"> @Model.Description</div>
+        </div>
+        @*Back Button*@
+        <a asp-area="" asp-controller="Image" asp-action="Index" class="link">
+            <span class="mask">
+                <div class="link-container">
+                    <span class="link-title1 back-link-title ">Back to Gallery</span>
+                    <span class="link-title2 back-link-title ">Back to Gallery</span>
+                </div>
+            </span>
+            <div class="link-icon">
+                <svg class="back-icon" width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd"
+                    clip-rule="evenodd">
+                    <path d="M21.883 12l-7.527 6.235.644.765 9-7.521-9-7.479-.645.764 7.529 6.236h-21.884v1h21.883z" />
+                </svg>
+                <svg class="back-icon" width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd"
+                    clip-rule="evenodd">
+                    <path d="M21.883 12l-7.527 6.235.644.765 9-7.521-9-7.479-.645.764 7.529 6.236h-21.884v1h21.883z" />
+                </svg>
+            </div>
+        </a>
 
-</div>
+
+    </div>

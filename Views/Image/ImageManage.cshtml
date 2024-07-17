@@ -1,34 +1,52 @@
 ﻿@{
     ViewData["Title"] = "Image detail";
+    Layout = "_AdminLayout";
 }
 @using Vangoph.Views.Image
 @model List<Image>
 
-<div class="image-list">
+<div class="image-list manage">
     @{
         foreach (var item in Model)
         {
-            <component type="typeof(ImageManageItem)" render-mode="ServerPrerendered" param-Model="@item"/>
-            <button onclick="postDelete(@item.Id)">delete</button>
-            <button onclick="getUpdate(@item.Id)">update</button>
+            <component type="typeof(ImageManageItem)" render-mode="ServerPrerendered" param-Model="@item" />
+            <div class="image-item">
+                <div class="image-wrapper">
+                    <img src="@item.ImageUrl" alt="Image">
+                    <div class="button-wrapper">
+                        <button onclick="postDelete(@item.Id)">delete</button>
+                        <button onclick="getUpdate(@item.Id)">update</button>
+                    </div>
+                </div>
+
+                <div class="name">@item.Name</div>
+                <div class="name">@String.Format("{0:#,##0.00}", item.Price)</div>
+            </div>
+
         }
+
     }
 </div>
-
+@{
+    if (Model.Count() == 0)
+    {
+        <p>!! No Items to View !!</p>
+    }
+}
 <script>
     function postDelete(id) {
-        $.post("/Image/delete", 
-        {
-            imageId: id,
-        },
-        function(data, status) {
-            // 请求成功后刷新页面
-            if (status === "success") {
-                location.reload();
-            } else {
-                alert("Error: " + status);
-            }
-        });
+        $.post("/Image/delete",
+            {
+                imageId: id,
+            },
+            function (data, status) {
+                // 请求成功后刷新页面
+                if (status === "success") {
+                    location.reload();
+                } else {
+                    alert("Error: " + status);
+                }
+            });
     }
     function getUpdate(id) {
         window.location.assign(`/Image/update?imageId=${id}`);

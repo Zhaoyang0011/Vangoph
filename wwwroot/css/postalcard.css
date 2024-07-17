@@ -1,0 +1,62 @@
+.postal-card{
+    display: flex;
+    flex-direction: column;
+    margin-top: 100px;
+}
+
+.post-card-bottom{
+    display: flex;
+    flex: 1;
+    width: 100%;
+}
+
+.post-card-title{
+    margin-top: 50px;
+}
+
+.contact{
+    align-self: flex-end;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.contact img{
+    width: 90px;
+    height: auto;
+    align-self: flex-end;
+    margin-bottom: 50px;
+}
+
+.text-section{
+    height: 70%;
+    border-right: 1px solid gray;
+    align-self: flex-end;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+textarea{
+    height: 100%;
+    align-self: flex-end;
+}
+
+.text-section, .contact{
+    padding: 0  40px;
+}
+
+.postal-card .link{
+    align-items: center;
+  text-decoration: none;
+  display: flex;
+  padding: 30px 0;
+  
+}
+
+.postal-card .link-icon{
+    transform: rotateY(180deg) !important;
+    margin-right: 5px;
+    margin-left: 0;
+}
+

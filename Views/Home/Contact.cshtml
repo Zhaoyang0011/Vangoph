@@ -1,0 +1,76 @@
+@{
+    ViewData["Title"] = "Contact";
+    Layout = "_NoNavLayout";
+}
+
+
+<form class="postal-card">
+
+
+    <!---------------<img src="~/image/stamp.jpg" alt="Image">----Left side Section for image uploading-------------->
+
+
+    <a class="nav-brand post-card-title" asp-area="" asp-controller="Image" asp-action="Index">Vangoph's Mail</a>
+
+
+
+    <div class="post-card-bottom">
+        <!-------------------left side Section for Postal Card-------------->
+
+        <div class="text-section"><textarea
+                placeholder="Write your question and request here ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------"
+                id="description" name="description" required></textarea>
+
+            @*Back Button*@
+            <a asp-area="" asp-controller="Image" asp-action="Index" class="link">
+               
+                <div class="link-icon">
+                    <svg class="back-icon" width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd"
+                        clip-rule="evenodd">
+                        <path
+                            d="M21.883 12l-7.527 6.235.644.765 9-7.521-9-7.479-.645.764 7.529 6.236h-21.884v1h21.883z" />
+                    </svg>
+                    <svg class="back-icon" width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd"
+                        clip-rule="evenodd">
+                        <path
+                            d="M21.883 12l-7.527 6.235.644.765 9-7.521-9-7.479-.645.764 7.529 6.236h-21.884v1h21.883z" />
+                    </svg>
+                </div>
+
+                 <span class="mask">
+                    <div class="link-container">
+                        <span class="link-title1 back-link-title ">Back to Gallery</span>
+                        <span class="link-title2 back-link-title ">Back to Gallery</span>
+                    </div>
+                </span>
+            </a>
+        </div>
+
+
+        <!-------------------right side Section for Postal Card-------------->
+
+        <div class="contact">
+            <img src="~/image/stamp.jpg" alt="Image">
+            <div class="input-box">
+                <input name="name" required />
+                <label>Name</label>
+            </div>
+
+            <div class="input-box">
+                <input type="text" name="email" required />
+                <label>Email</label>
+            </div>
+
+            <div class="input-box">
+                <input type="number" name="phone" required />
+                <label>Phone</label>
+            </div>
+
+
+
+
+            <button type="submit" class="btn btn-primary">Send</button>
+        </div>
+    </div>
+
+</form>
