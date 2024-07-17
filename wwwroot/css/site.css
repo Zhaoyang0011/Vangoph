@@ -189,7 +189,7 @@ textarea:valid {
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   gap: 50px;
   row-gap: 80px;
-  margin-top: 90px;
+  margin-top: 78px;
 }
 .image-item {
   height: 330px;
@@ -297,7 +297,7 @@ textarea:valid {
 
 .back-link-title {
   display: block;
-  font-size: 18px;
+
 }
 
 .link-title1 {
