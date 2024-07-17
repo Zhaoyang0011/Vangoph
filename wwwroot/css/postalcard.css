@@ -22,10 +22,10 @@
 }
 
 .contact img{
-    width: 100px;
+    width: 90px;
     height: auto;
     align-self: flex-end;
-    margin-bottom: 30px;
+    margin-bottom: 50px;
 }
 
 .text-section{
@@ -50,8 +50,13 @@ textarea{
     align-items: center;
   text-decoration: none;
   display: flex;
-  align-self:flex-end;
-  padding: 20px 0;
+  padding: 30px 0;
   
+}
+
+.postal-card .link-icon{
+    transform: rotateY(180deg) !important;
+    margin-right: 5px;
+    margin-left: 0;
 }
 
