@@ -11,10 +11,12 @@ namespace Vangoph.Controllers;
 public class ImageController : Controller
 {
     private readonly ImageService _imageService;
+    private readonly MailSender _mailSender;
 
-    public ImageController(ImageService imageService)
+    public ImageController(ImageService imageService, MailSender mailSender)
     {
         _imageService = imageService;
+        _mailSender = mailSender;
     }
 
     public async Task<IActionResult> Index()
