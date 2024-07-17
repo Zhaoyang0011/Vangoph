@@ -187,17 +187,15 @@ textarea:valid {
   display: grid;
   width: 80%;
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-  gap: 40px;
+  gap: 50px;
   row-gap: 80px;
   margin-top: 45px;
 }
 .image-item {
   height: 300px;
-  padding: 10px;
 }
 
 .image-view-list a {
-  display: block;
   position: relative;
   overflow: hidden;
 }
@@ -209,7 +207,7 @@ textarea:valid {
   transition: all 0.5s ease;
 }
 .image-view-list img:hover {
-  transform: scale(1.2);
+  transform: scale(1.05);
 }
 .name {
   text-align: center;
