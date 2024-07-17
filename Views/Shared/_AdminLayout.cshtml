@@ -11,17 +11,45 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" asp-append-version="true" />
 </head>
 
+@functions {
+    public string GetCurrentRoute()
+    {
+        string route = (string)ViewContext.RouteData.Values["action"];
+        return route;
+    }
+
+/*Check which route the page is right now*/
+    public string GetStatus()
+    {
+        switch (GetCurrentRoute())
+        {
+            case "UploadPage":
+                return "left:0";
+
+            case "Manage":
+                return "right:0";
+
+            default:
+                return "opacity:0";
+        }
+    }
+}
+
+
 <body>
     <header>
         <nav class="admin-nav">
             <a asp-area="" asp-controller="Image" asp-action="Index" class="nav-brand">Vangoph's Admin</a>
             <ul class="navbar ">
-                <a asp-area="" asp-controller="Image" asp-action="Upload">Upload</a>
-                <a asp-area="" asp-controller="Image" asp-action="Manage">Manage</a>
+                <div class="switch">
+                    <a asp-area="" asp-controller="Image" asp-action="Upload">Upload</a>
+                    <a asp-area="" asp-controller="Image" asp-action="Manage">Manage</a>
+                    <span class="switch-mask" style=@GetStatus()></span>
+                </div>
             </ul>
         </nav>
     </header>
-
+    <!--------------<p>Current Route: @GetCurrentRoute()</p>---------->
 
     <div class="container">
         @RenderBody()

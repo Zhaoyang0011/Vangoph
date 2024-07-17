@@ -19,6 +19,7 @@ html {
 
 body {
   margin-bottom: 60px;
+  min-height: 100vh;
 }
 
 .container {
@@ -297,7 +298,7 @@ textarea:valid {
 
 .back-link-title {
   display: block;
-
+  font-size: 18px;
 }
 
 .link-title1 {
