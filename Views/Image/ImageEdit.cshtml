@@ -1,21 +1,22 @@
 ﻿@{
     ViewData["Title"] = "Image detail";
+    Layout = "_AdminLayout";
 }
 @model Image
 
-<form method="post" asp-controller="Image" asp-action="Update" enctype="multipart/form-data">
+<form method="post" asp-controller="Image" asp-action="Update" enctype="multipart/form-data" class="edit">
 
 
     <!-------------------Left side Section for image uploading-------------->
 
-    <div class="image-wrapper">
+    <div class="form-section image-wrapper">
         <img src="@Model.ImageUrl" alt="Image">
     </div>
     <!-------------------right side Section for image uploading-------------->
     <input id="id" name="id" hidden="hidden" value="@Model.Id" required/>
 
     <div class="form-section input-section">
-        <h3 style="text-align: center;">New Artwork</h3>
+        <h3 style="text-align: center;">Edit Post</h3>
         <div class="input-box">
             <input id="name" name="name" value="@Model.Name" required/>
             <label>Art Title</label>
@@ -34,10 +35,10 @@
 
         <div class="input-box textarea-box">
             <textarea placeholder="Add Description Here :)" id="description" value="@Model.Description"
-                name="description" required></textarea>
+                name="description" required>@Model.Description</textarea>
         </div>
 
-        <button type="submit" class="btn btn-primary">Upload</button>
+        <button type="submit" class="btn btn-primary">Update</button>
     </div>
 
 

@@ -16,7 +16,7 @@ function limitDecimalPlaces(e, count) {
 
 //black and white effect
 document.addEventListener("DOMContentLoaded", function() {
-  const images = document.querySelectorAll('.image-item img');
+  const images = document.querySelectorAll('.image-item');
 
   images.forEach(image => {
       image.addEventListener('mouseenter', () => {
