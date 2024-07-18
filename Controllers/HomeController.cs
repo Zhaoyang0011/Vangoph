@@ -34,6 +34,11 @@ public class HomeController : Controller
         return View();
     }
 
+     public IActionResult Shipping()
+    {
+        return View();
+    }
+
     [HttpPost("/mail")]
     public async Task<IActionResult> SendEmail([FromForm] ContactRequest request)
     {

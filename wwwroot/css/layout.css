@@ -2,8 +2,10 @@
 
 
 /*footer*/
-.border-top{
-  margin-top: 100px;
+footer{
+  margin-top: auto; 
+  font-size: 13px;
+  width: 100%;
   text-align: center;
 }
 /*universal*/
@@ -43,6 +45,16 @@ a:active {
 }
 
 /*Admin Style*/
+.admin-nav{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.admin-nav ul{
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+}
 .admin-nav ul a {
   color: #18272f;
   position: relative;
@@ -51,28 +63,24 @@ a:active {
   text-transform: uppercase;
   letter-spacing: 1px;
   font-weight: 600;
+  font-size: 14px;
+  height: 100%;
+  display: flex;
+  align-items: center;
 }
 
 .switch{
   position: relative;
-  padding: 8px 0;
   display: flex;
   box-shadow:6px 6px 8px 0 rgba(177, 177, 177, 0.15), -4px -4px 6px 0 rgba(163, 163, 163, 0.2);
   border-radius: 999999px;
   overflow: hidden;
+  height: 30px;
 }
 
-.switch-mask{
-  height: 100%;
-  width: 50%;
-  position: absolute;
-  display: block;
-  top: 0;
-  z-index: -1;
-  box-shadow: 0;
-  background-color: #d0e0ee;
+.active{
+  background-color: #d9e3e9;
 }
-
 /*Envelope Hover Effect*/
 
 .envelope {

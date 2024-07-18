@@ -51,6 +51,9 @@ textarea{
   text-decoration: none;
   display: flex;
   padding: 30px 0;
+  transform: scale(.8);
+  margin-right: auto;
+  transform-origin:  left;
   
 }
 
@@ -59,4 +62,6 @@ textarea{
     margin-right: 5px;
     margin-left: 0;
 }
+
+
 
