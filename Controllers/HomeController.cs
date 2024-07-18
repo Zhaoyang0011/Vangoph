@@ -20,7 +20,13 @@ public class HomeController : Controller
 
     public IActionResult Index()
     {
-        return View();
+        return Redirect("/Image");
+    }
+
+    [HttpGet("/admin")]
+    public IActionResult Admin()
+    {
+        return Redirect("/Image/manage");
     }
 
     public IActionResult Contact()
