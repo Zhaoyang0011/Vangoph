@@ -42,31 +42,31 @@ public class HomeController : Controller
     [HttpPost("/contactadmin")]
     public async Task<IActionResult> ContactAdminAsync([FromForm] ContactRequest request)
     {
-        if (ModelState.IsValid)
+        if (!ModelState.IsValid)
         {
-            await _mailSender.NotifyAdmin(request);
-            await _mailSender.ReplyUser(request);
-            return Redirect("Image");
+            return View("Error", ModelState.Values.SelectMany(it => it.Errors).Select(e => e.ErrorMessage).ToList());
         }
 
-        return View("Error", "Attribute Invalid!");
+        await _mailSender.NotifyAdmin(request);
+        await _mailSender.ReplyUser(request);
+        return Redirect("Image");
     }
 
     [HttpPost("/shipnotify")]
     public async Task<IActionResult> ShipNotifyAsync([FromForm] ShipNotifyRequest request)
     {
-        if (ModelState.IsValid)
+        if (!ModelState.IsValid)
         {
-            await _mailSender.ShipNotifyAsync(request);
-            return Redirect("Image");
+            return View("Error", ModelState.Values.SelectMany(it => it.Errors).Select(e => e.ErrorMessage).ToList());
         }
 
-        return View("Error", "Attribute Invalid!");
+        await _mailSender.ShipNotifyAsync(request);
+        return Redirect("Image");
     }
 
     [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
     public IActionResult Error()
     {
-        return View("/Error", "Unknow Error");
+        return View("/Error", new List<string> { "Unknow Error" });
     }
 }
