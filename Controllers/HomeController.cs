@@ -49,7 +49,7 @@ public class HomeController : Controller
 
         await _mailSender.NotifyAdmin(request);
         await _mailSender.ReplyUser(request);
-        return Redirect("Image");
+        return Redirect("/Image/manage");
     }
 
     [HttpPost("/shipnotify")]
@@ -61,7 +61,7 @@ public class HomeController : Controller
         }
 
         await _mailSender.ShipNotifyAsync(request);
-        return Redirect("Image");
+        return Redirect("/Image/manage");
     }
 
     [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
