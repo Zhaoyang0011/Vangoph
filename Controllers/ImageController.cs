@@ -22,7 +22,7 @@ public class ImageController : Controller
     public async Task<IActionResult> Index()
     {
         List<Image> images = await _imageService.GetImagesAsync(0);
-        return View("Index", images);
+        return View(images);
     }
 
     [HttpGet("detail")]

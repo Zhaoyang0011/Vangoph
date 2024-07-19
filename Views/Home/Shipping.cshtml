@@ -4,22 +4,22 @@
 }
 
 
-<form class="postal-card" asp-controller="Home" asp-action="SendEmail" method="post">
+<form class="postal-card" asp-controller="Home" asp-action="ShipNotify" method="post">
 
 
     <div class="contact">
         <div class="input-box">
-            <input name="trackingID" required />
+            <input name="trackingID" required/>
             <label>Tracking Number</label>
         </div>
 
         <div class="input-box">
-            <input type="text" name="item" required />
+            <input type="text" name="item" required/>
             <label>Item Name</label>
         </div>
 
         <div class="input-box">
-            <input type="text" name="email" required />
+            <input type="text" name="email" required/>
             <label>Customer Email</label>
         </div>
 

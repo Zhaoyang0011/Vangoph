@@ -34,17 +34,30 @@ public class HomeController : Controller
         return View();
     }
 
-     public IActionResult Shipping()
+    public IActionResult Shipping()
     {
         return View();
     }
 
-    [HttpPost("/mail")]
-    public async Task<IActionResult> SendEmail([FromForm] ContactRequest request)
+    [HttpPost("/contactadmin")]
+    public async Task<IActionResult> ContactAdminAsync([FromForm] ContactRequest request)
     {
         if (ModelState.IsValid)
         {
-            await _mailSender.SendAsync(request.Email, "Question", request.Description);
+            await _mailSender.NotifyAdmin(request);
+            await _mailSender.ReplyUser(request);
+            return Redirect("Image");
+        }
+
+        return View("Error", "Attribute Invalid!");
+    }
+
+    [HttpPost("/shipnotify")]
+    public async Task<IActionResult> ShipNotifyAsync([FromForm] ShipNotifyRequest request)
+    {
+        if (ModelState.IsValid)
+        {
+            await _mailSender.ShipNotifyAsync(request);
             return Redirect("Image");
         }
 

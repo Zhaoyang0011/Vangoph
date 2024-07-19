@@ -4,7 +4,7 @@
 }
 
 
-<form class="postal-card" asp-controller="Home" asp-action="SendEmail" method="post">
+<form class="postal-card" asp-controller="Home" asp-action="ContactAdmin" method="post">
 
 
     <!---------------<img src="~/image/stamp.jpg" alt="Image">----Left side Section for image uploading-------------->
@@ -57,11 +57,11 @@
             </div>
 
             <div class="input-box">
-                <input type="text" name="userEmail" required/>
+                <input type="text" name="email" required/>
                 <label>Email</label>
             </div>
 
-            <input type="text" name="email" value="vangoph.6844@hotmail.com" hidden/><!-------------owner'semail----------->
+            @* <input type="text" name="email" value="vangoph.6844@hotmail.com" hidden/><!-------------owner'semail-----------> *@
 
             <div class="input-box">
                 <input type="number" name="phone" required/>
