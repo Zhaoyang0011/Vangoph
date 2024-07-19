@@ -31,7 +31,7 @@ public class ImageController : Controller
         var image = await _imageService.GetImageByIdAsync(imageId);
         if (image != null)
             return View("ImageDetail", image);
-        return View("Error", "Image does not exists!");
+        return View("Error", new List<string>() { "Image does not exists!" });
     }
 
     [HttpGet("upload")]
@@ -72,7 +72,7 @@ public class ImageController : Controller
         var image = await _imageService.GetImageByIdAsync(imageId);
         if (image != null)
             return View("ImageEdit", image);
-        return View("Error", "Image does not exists!");
+        return View("Error", new List<string>() { "Image shold be uploaded!" });
     }
 
     [HttpPost("update")]
